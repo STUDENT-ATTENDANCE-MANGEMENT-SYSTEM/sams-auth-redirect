@@ -5,58 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Authentication Successful</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background-color: #F2EBE3; /* App's background light color */
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: #f3f4f6;
-        color: #333;
+        color: #2C3E5D; /* App's primary navy color */
       }
       .container {
         text-align: center;
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
+        background: #ffffff;
+        padding: 48px 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(44, 62, 93, 0.08); /* Soft modern shadow */
+        max-width: 440px;
         width: 90%;
       }
+      .main-logo {
+        max-width: 120px;
+        height: auto;
+        margin-bottom: 32px;
+      }
+      .check-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 20px auto;
+        display: block;
+      }
       h1 {
-        font-size: 1.8rem;
-        color: #4caf50;
+        font-size: 24px;
+        font-weight: 700;
+        color: #2C3E5D;
+        margin-bottom: 12px;
       }
       p {
-        font-size: 1rem;
-        margin-top: 1rem;
+        font-size: 15px;
         color: #555;
+        line-height: 1.6;
+        margin-bottom: 32px;
       }
       .button {
-        margin-top: 2rem;
-        display: inline-block;
-        padding: 0.8rem 1.5rem;
-        background-color: #4caf50;
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
+        display: block;
+        width: 100%;
+        background-color: #2C3E5D;
+        color: #ffffff !important;
+        text-align: center;
+        padding: 16px;
+        border-radius: 14px;
+        font-size: 16px;
+        font-weight: 600;
         text-decoration: none;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease;
+        transition: opacity 0.2s ease, transform 0.1s ease;
       }
       .button:hover {
-        background-color: #45a049;
+        opacity: 0.9;
+      }
+      .button:active {
+        transform: scale(0.98);
+      }
+      .note {
+        font-size: 13px;
+        color: #888;
+        margin-top: 24px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Authentication Successful</h1>
-      <p>You can now close this window and return to the app.</p>
-      <a href="#" class="button">Go to App</a>
+      <img src="https://blcbjbttpvxqjaexypvv.supabase.co/storage/v1/object/public/assets/logo.png" alt="SAMS Logo" class="main-logo" />
+      
+      <img src="https://blcbjbttpvxqjaexypvv.supabase.co/storage/v1/object/public/assets/check-logo.png" alt="Success Icon" class="check-icon" />
+      
+      <h1>Authentication Successful!</h1>
+      <p>Your email has been verified. You can safely close this window and return to the SAMS app to continue.</p>
+      
+      <a href="sams://" class="button">Return to App</a>
+
+      <div class="note">Authorized access only &bull; S.A.M.S</div>
     </div>
   </body>
 </html>
